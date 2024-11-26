@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Screens/dashboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,25 +12,9 @@ class MyApp extends StatelessWidget {
     // TODO: Implement build
     return MaterialApp(
       title: 'Temporary title',
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Dashboard title'),
-          backgroundColor: Colors.pinkAccent,
-        ),
-        body: Center(
-            child: Text.rich(
-                TextSpan(text: 'Text',
-                    children: [
-                      TextSpan(text: 'New span',
-                          style: TextStyle(fontSize: 50.0,
-                              fontWeight: FontWeight.bold)),
-                      TextSpan(text: 'Other span',
-                          style: TextStyle(fontSize: 10)),
-                    ])
-            ),
-        ),
-      ),
+      home: Dashboard()
     );
   }
 }
