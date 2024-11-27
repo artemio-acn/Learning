@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // * Fat Arrows
 class Dashboard extends StatelessWidget {
@@ -12,7 +13,18 @@ class Dashboard extends StatelessWidget {
         title: Text('Dashboard'.toUpperCase()),
         backgroundColor: Colors.blueGrey,
       ),
-      body: Image.asset(('images/imgWallpaper.jpg'), height: 300.0, fit: BoxFit.contain,),
+      body: Center(
+          child: IconButton(onPressed: (){
+            print("Tapped");
+          },
+              icon: Icon(FontAwesomeIcons.apple),
+            iconSize: 50,
+            color: Colors.white,
+            splashColor: Colors.grey,
+            highlightColor: Colors.blueGrey,
+          )
+      )
+      // Image.asset(('images/imgWallpaper.jpg'), height: 300.0, fit: BoxFit.contain,),
       // Center(
       //   child: Text('Random value is: ${getNumber()}'),
       // ),
@@ -28,7 +40,8 @@ class Dashboard extends StatelessWidget {
       // //           ])
       // //   ),
       // // ),
-    );
+    ,
+    backgroundColor: Colors.black54,);
   }
 }
 
