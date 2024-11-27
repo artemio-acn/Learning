@@ -14,22 +14,23 @@ class NavigationDrawerScreen extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
-                padding: EdgeInsets.all(10), 
-                child: Container(
-                  color: Colors.blueGrey,
-                child: Column(
-                  children: [
-                    Text('Hi')
-                  ],
-                ),)
+            UserAccountsDrawerHeader(
+                accountEmail: Text('test@shell.com'),
+                accountName: Text('Artemio'),
+                currentAccountPicture: CircleAvatar(
+                  foregroundColor: Colors.blueGrey,
+                  foregroundImage: AssetImage('images/imgWallpaper.jpg'),),
+              otherAccountsPictures: [
+                CircleAvatar(foregroundImage: AssetImage('images/imgWallpaper.jpg'),),
+                CircleAvatar(foregroundImage: AssetImage('images/imgWallpaper.jpg'),),
+              ],
             ),
             ListTile(leading: Icon(Icons.home), title: Text('Home'), onTap: () {},),
             ListTile(leading: Icon(Icons.shopping_cart), title: Text('Cart'), onTap: () {},),
             ListTile(leading: Icon(Icons.favorite), title: Text('Favorites'), onTap: () {},),
             Padding(
                 padding: const EdgeInsets.all(14.0),
-                child: Text('Labels'),
+                child: Text('Other options'),
             ),
             ListTile(leading: Icon(Icons.home), title: Text('Home'), onTap: () {},),
             ListTile(leading: Icon(Icons.shopping_cart), title: Text('Cart'), onTap: () {},),
