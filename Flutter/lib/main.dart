@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 // import 'Screens/dashboard.dart';
 // import 'Screens/home.dart';
 // import 'Screens/list_home.dart';
-import 'Screens/home_with_builder.dart';
+// import 'Screens/home_with_builder.dart';
+import 'Screens/navigation_drawer_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Temporary title',
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: ListHomeWithBuilder(),
+      home: NavigationDrawerScreen(),
     );
   }
 }
